@@ -142,7 +142,7 @@ section {
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    width: calc(33.333% - 20px);
+    width: 300px;
 }
 
     .team-member:hover {
@@ -247,6 +247,7 @@ a {
     justify-content: center;
     gap: 15px;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .social-icon {
