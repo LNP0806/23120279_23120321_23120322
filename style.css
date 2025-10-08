@@ -1,0 +1,357 @@
+﻿<style >
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark-blue: #0a192f;
+    --medium-blue: #112240;
+    --light-blue: #233554;
+    --accent: #64ffda;
+    --text-light: #ccd6f6;
+    --text-dark: #8892b0;
+}
+
+body {
+    background-color: #101C2C;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: var(--medium-blue);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--text-light);
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+section {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.hero {
+    text-align: center;
+    margin-top: 100px;
+}
+
+    .hero h1 {
+        font-size: 48px;
+        color: var(--text-light);
+        margin-bottom: 16px;
+    }
+
+    .hero p {
+        color: var(--text-dark);
+        font-size: 19px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+
+.team-section {
+    max-width: 1200px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 48px;
+    color: var(--text-light);
+    position: relative;
+    display: inline-block;
+}
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        width: 60%;
+        height: 2px;
+        background-color: var(--accent);
+        bottom: -10px;
+        left: 20%;
+    }
+
+.team-grid {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.team-member {
+    background-color: var(--medium-blue);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: calc(33.333% - 20px);
+}
+
+    .team-member:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+.member-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--light-blue);
+}
+
+
+
+.member-name {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+.member-id {
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.member-desc {
+    color: var(--text-dark);
+    font-size: 14.5px;
+}
+
+.info-section {
+    margin-top: 64px;
+}
+
+.info-card {
+    background-color: var(--medium-blue);
+    border-radius: 10px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+    .info-card h3 {
+        color: var(--accent);
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .info-card p {
+        color: var(--text-dark);
+        margin-bottom: 8px;
+    }
+
+/* Footer */
+footer {
+    background-color: var(--medium-blue);
+    text-align: center;
+    padding: 32px;
+    margin-top: 64px;
+}
+
+    footer p {
+        color: var(--text-dark);
+        font-size: 14.5px;
+    }
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 35.5px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    nav ul {
+        gap: 16px;
+    }
+}
+
+.info-container {
+    scroll-margin: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+    a:visited,
+    a:hover,
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    }
+
+/* CSS mới cho icon mạng xã hội */
+.member-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+    .social-icon:hover {
+        background-color: var(--accent);
+        transform: translateY(-3px);
+    }
+
+    .social-icon i {
+        color: var(--text-light);
+        font-size: 18px;
+    }
+
+    .social-icon:hover i {
+        color: var(--dark-blue);
+    }
+
+/* CSS cho image map */
+.group-photo-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.group-photo {
+    width: 800px;
+    height: 700px;
+    object-fit: cover;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.member-area {
+    position: absolute;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+    .member-area:hover {
+        border-color: var(--accent);
+    }
+
+    .member-area::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(100, 255, 218, 0.2);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .member-area:hover::after {
+        opacity: 1;
+    }
+
+.member-label {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--medium-blue);
+    color: var(--text-light);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.member-area:hover .member-label {
+    opacity: 1;
+}
+
+/* Responsive cho image map */
+@media (max-width: 768px) {
+    .member-area {
+        display: none;
+    }
+
+    .group-photo-container::after {
+        content: "Trên màn hình nhỏ, vui lòng xem thông tin thành viên ở phần bên dưới";
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        color: var(--text-dark);
+        font-size: 14px;
+    }
+}
+
+</style >
