@@ -354,6 +354,7 @@ a {
 }
 
 .member-detail-card {
+    padding: 10px 10px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
